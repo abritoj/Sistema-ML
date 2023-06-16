@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import pandas as pd
 import numpy as np
 
-rc=FastAPI()
+app = FastAPI()
 
 merged_df=pd.read_csv('merged_df.csv')
 
