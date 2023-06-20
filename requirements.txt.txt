@@ -1,6 +1,4 @@
 pandas
 numpy
-uvicorn
-sklearn
 streamlit
-nltk
+nltk==3.6.5

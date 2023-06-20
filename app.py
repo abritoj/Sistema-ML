@@ -2,7 +2,7 @@ import pandas as pd
 import nltk
 from nltk.sentiment import SentimentIntensityAnalyzer
 import streamlit as st
-
+nltk.download('vader_lexicon')
 def obtener_ciudades_con_mejor_review(estado):
     # Cargar el DataFrame con los datos de los negocios
     df = pd.read_csv('datamodelo5estadossinsentimiento.csv')  # Reemplaza 'ruta_del_archivo.csv' con la ruta real de tu archivo de datos
