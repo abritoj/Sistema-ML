@@ -34,8 +34,8 @@ estado_seleccionado = st.selectbox("Selecciona un estado", ['NY', 'CA', 'HI', 'N
 # Obtener las ciudades con las mejores revisiones
 lista_ciudades_categorias = obtener_ciudades_con_mejor_review(estado_seleccionado)
 
-# Mostrar los resultados
-for ciudad, categorias in lista_ciudades_categorias:
-    st.write("Ciudad:", ciudad)
-    st.write("Categorías:", categorias)
-    st.write("-----------------------")
+# Mostrar los resultados en una tabla
+st.subheader("Ciudades con las Mejores Revisiones")
+df_resultados = pd.DataFrame(lista_ciudades_categorias, columns=['Ciudad', 'Categorías'])
+st.table(df_resultados)
+
